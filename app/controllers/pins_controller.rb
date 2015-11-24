@@ -38,7 +38,7 @@ class PinsController < ApplicationController
 
   def destroy
     if @pin.destroy
-    respond_to @pin, :notice => "Your post has been deleted"
+    redirect_to pins_url, :notice => "Your post has been deleted"
     end  
   end
 
